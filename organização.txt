@@ -1,0 +1,16 @@
+PDM-PinkHouse/
+├── src/
+│   ├── @types/          # Tipagens TypeScript (DTOs, interfaces)
+│   ├── assets/          # Imagens, fontes e ícones
+│   ├── components/      # Componentes visuais reutilizáveis
+│   ├── config/          # Arquivos de configuração (axios, envs)
+│   ├── hooks/           # Custom hooks da aplicação
+│   ├── routes/          # Navegação (React Navigation / Expo Router)
+│   ├── screens/         # Telas do aplicativo
+│   ├── services/        # ★ Onde fica a comunicação com o Back-end (Axios/Fetch)
+│   │   ├── api.ts       # Instância base do Axios
+│   │   ├── authService.ts
+│   │   └── userService.ts
+│   └── utils/           # Funções auxiliares e formatadores
+├── App.tsx
+└── package.json
