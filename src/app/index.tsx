@@ -1,3 +1,3 @@
-import Principal from '@/screens/Principal/Principal';
+import Home from '@/screens/Home/Home';
 
-export default Principal;
+export default Home;

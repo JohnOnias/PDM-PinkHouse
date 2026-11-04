@@ -1,0 +1,23 @@
+utilizem o expo router para navegação 
+exemplo:
+    "import { router } from 'expo-router';"
+    "router.push('/X')"
+
+    x = tela que quer navegar 
+
+
+    BEM SIMPLES
+
+
+
+
+ - O "CSS" do jeito que esta por enquanto no proprio arquivo
+
+ - icones no material-ui 
+    procurem lá icones que se encaixam melhor no que quer fazer 
+
+
+- as cores final vão ser escolhidas principalemnte o rosa, depois iremos usar o seletor de cor no rosa
+        as cores seram definidas futuramente, por enquanto vai so usando qualquer rosa parecido 
+
+- façam tudo componentizando de forma simples sem complexidade desnecessaria 

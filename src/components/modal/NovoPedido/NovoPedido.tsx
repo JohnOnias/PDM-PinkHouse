@@ -1,9 +1,15 @@
-import RegistrarVenda from '@/screens/RegistrarVenda/RegistrarVenda';
 import { useState } from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  Modal,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
-export default function Principal() {
+import RegistrarVenda from '@/components/modal/RegistrarVenda/RegistrarVenda';
+
+export default function NovoPedido() {
   const [novoPedidoAberto, setNovoPedidoAberto] = useState(false);
 
   function abrirNovoPedido() {
@@ -15,16 +21,21 @@ export default function Principal() {
   }
 
   return (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
+    <>
+      {/* Botão Novo Pedido */}
       <Pressable
         onPress={abrirNovoPedido}
         accessibilityRole="button"
         accessibilityLabel="Novo pedido"
-        style={({ pressed }) => [styles.fab, pressed && styles.fabPressionado]}
+        style={({ pressed }) => [
+          styles.fab,
+          pressed && styles.fabPressionado,
+        ]}
       >
         <Text style={styles.fabTexto}>Novo pedido 🛒</Text>
       </Pressable>
 
+      {/* Modal de registro */}
       <Modal
         visible={novoPedidoAberto}
         transparent
@@ -55,15 +66,11 @@ export default function Principal() {
           </View>
         </View>
       </Modal>
-    </SafeAreaView>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF5F8',
-  },
   fab: {
     position: 'absolute',
     right: 20,
@@ -80,19 +87,23 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 6 },
     elevation: 6,
   },
+
   fabPressionado: {
     opacity: 0.85,
   },
+
   fabTexto: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '700',
   },
+
   fundo: {
     flex: 1,
     backgroundColor: 'rgba(61, 27, 41, 0.45)',
     justifyContent: 'flex-end',
   },
+
   popup: {
     backgroundColor: '#FFF5F8',
     borderTopLeftRadius: 24,
@@ -100,6 +111,7 @@ const styles = StyleSheet.create({
     maxHeight: '90%',
     overflow: 'hidden',
   },
+
   cabecalho: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -110,11 +122,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#F3C6D6',
   },
+
   titulo: {
     fontSize: 20,
     fontWeight: '700',
     color: '#3D1B29',
   },
+
   botaoFechar: {
     width: 32,
     height: 32,
@@ -125,9 +139,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#F3C6D6',
   },
+
   botaoFecharPressionado: {
     opacity: 0.7,
   },
+
   botaoFecharTexto: {
     fontSize: 14,
     fontWeight: '700',
