@@ -7,8 +7,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 //import de componentes react
-import Navbar from '@/components/Layout/Navbar/Navbar';
-import Footer from '@/components/Layout/Footer/Footer';
+import Navbar from '../components/Layout/Navbar/NavBar';
+import Footer from '../components/Layout/Footer/Footer';
 
 export default function RootLayout() {
   const [bancoPronto, setBancoPronto] = useState(false);

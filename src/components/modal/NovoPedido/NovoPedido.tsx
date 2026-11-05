@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  KeyboardAvoidingView,
   Modal,
   Pressable,
   StyleSheet,
@@ -43,7 +44,7 @@ export default function NovoPedido() {
         statusBarTranslucent
         onRequestClose={fecharNovoPedido}
       >
-        <View style={styles.fundo}>
+        <KeyboardAvoidingView style={styles.fundo} behavior="padding">
           <View style={styles.popup}>
             <View style={styles.cabecalho}>
               <Text style={styles.titulo}>Registrar venda</Text>
@@ -64,7 +65,7 @@ export default function NovoPedido() {
 
             <RegistrarVenda />
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </Modal>
     </>
   );

@@ -7,8 +7,6 @@ import { centavosParaTexto, digitosParaCentavos } from '@/utils/currency';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
-  KeyboardAvoidingView,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -132,10 +130,7 @@ export default function RegistrarVenda() {
   }
 
   return (
-    <KeyboardAvoidingView
-      style={styles.flex}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    >
+    <View style={styles.flex}>
       <ScrollView
         contentContainerStyle={styles.conteudo}
         keyboardShouldPersistTaps="handled"
@@ -226,7 +221,7 @@ export default function RegistrarVenda() {
           )}
         </Pressable>
       </ScrollView>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 
